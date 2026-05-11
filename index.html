@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css">
+    <title>Хранилище Интеллект-карт</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Хранилище</div>
+            <!-- Поиск -->
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="Поиск изображений..." id="searchInput">
+            </div>
+            <!-- Сортировка -->
+            <div class="filter-group">
+                <div class="filter-title">Сортировка</div>
+                <select id="sort">
+                    <option value="Nat">Естественные</option>
+                    <option value="Hum">Гуманитарные</option>
+                    <option value="Oth">Другое</option>
+                </select>
+            </div>
+
+        </aside>
+
+        <!-- Main content -->
+        <main class="main">
+            <div class="cards-grid" id="cardsGrid">
+                <!-- Карточки будут здесь -->
+                <div class="card" id="1" data-category="Hum">
+                    <a href=""><img src="Img/право.png" alt="Право"></a>
+                    <div class="card-title">Право</div>
+                </div>
+                <div class="card" id="2" data-category="Nat">
+                    <a href="Maps/V2.0_ЕГЭ по информатике и ИКТ (6).html"><img src="Img/Информатика.png"
+                            alt="Информатика"></a>
+                    <div class="card-title">Информатика</div>
+                </div>
+                <div class="card" id="3" data-category="Hum">
+                    <a href=""><img src="Img/Русский.png" alt="Русский"></a>
+                    <div class="card-title">Русский язык</div>
+                </div>
+                <div class="card" id="4" data-category="Hum">
+                    <a href=""><img src="Img/экономика.png" alt="Экономика"></a>
+                    <div class="card-title">Экономика</div>
+                </div>
+                <div class="card" id="5" data-category="Nat">
+                    <a href="Maps/Карта для Алексея .html"><img src="Img/математика.png" alt="Математика"></a>
+                    <div class="card-title">Математика</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
