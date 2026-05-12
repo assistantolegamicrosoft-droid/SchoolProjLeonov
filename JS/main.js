@@ -11,7 +11,12 @@ function CheckFilter() {
     const humanits = document.querySelectorAll('[data-category="Hum"]');
     const others = document.querySelectorAll('[data-category="Oth"]');
     var N, H, O;
-    if (type == "Hum") {
+    if (type == "All") {
+        H = '';
+        N = '';
+        O = '';
+    }
+    else if (type == "Hum") {
         H = '';
         N = 'none';
         O = 'none';
