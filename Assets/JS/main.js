@@ -1,8 +1,5 @@
-['change', 'click'].forEach(evt => {
-    document.addEventListener(evt, CheckFilter);
-});
 
-var type = document.getElementById('sort').value;
+
 const naturals = document.querySelectorAll('[data-category="Nat"]');
 const humanits = document.querySelectorAll('[data-category="Hum"]');
 const others = document.querySelectorAll('[data-category="Oth"]');
@@ -18,7 +15,12 @@ let InputText = "";
 
 var input = document.getElementById("searchInput");
 //----------------------------------------------------------
+['change', 'click'].forEach(evt => {
+    document.addEventListener(evt, CheckFilter);
+});
+
 function CheckFilter() {
+    var type = document.getElementById('sort').value;
     if (type == "All") {
         H = '';
         N = '';
@@ -52,6 +54,7 @@ function CheckFilter() {
 }
 
 input.addEventListener("keyup", function (event) {
+    var type = document.getElementById('sort').value;
     if (event.keyCode === 13) {
         const InputText = String(input.value);
         const len = InputText.length;
@@ -67,7 +70,7 @@ input.addEventListener("keyup", function (event) {
             console.log(count);
             const displayStyle = (count === len) ? '' : 'none';
             const el = document.getElementById(id);
-            if (el) {
+            if (el && el.dataset.category == type) {
                 el.style.display = displayStyle;
             }
         }
